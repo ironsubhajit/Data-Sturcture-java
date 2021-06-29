@@ -2,5 +2,5 @@
 ---
 
 # Content:  
-1. LinkedList
-    . SinglyLinkedList
+1. LinkedList  
+    . SinglyLinkedList  
