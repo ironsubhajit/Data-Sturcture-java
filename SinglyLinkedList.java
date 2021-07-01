@@ -9,11 +9,13 @@ class Node{
 
 public class SinglyLinkedList {
     Node head;
-
+    
+    // check a node is emoty or not
     boolean isEmpty(Node n){
         return n == null;
     }
 
+    // add new node at tail
     void add(int data){
         Node toAdd = new Node(data);
         Node temp = head;
@@ -29,7 +31,8 @@ public class SinglyLinkedList {
         temp.next = toAdd;
         return;
     }
-
+    
+    // insert node at tail same as add method
     Node insertNodeAtTail(Node head, int data) {
         Node temp = head;
         if (head == null){
@@ -42,7 +45,8 @@ public class SinglyLinkedList {
         temp.next = new Node(data);
         return head;  
     }
-
+    
+    // print linkedlist argument head node
     void printSinglyLinkedList(Node temp){
         if(temp == null){
             return;
