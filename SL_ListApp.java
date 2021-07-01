@@ -4,6 +4,11 @@ public class SL_ListApp {
         for(int i = 0; i < 10; i++){
             lList.add(i);
         }
-        lList.printSinglyLinkedList(lList.head);
+        System.out.println("\n");
+        Node head = lList.head;
+        for(int i = 10; i < 20; i++){
+            head = lList.insertNodeAtTail(head, i);
+        }
+        lList.printSinglyLinkedList(head);
     }
 }

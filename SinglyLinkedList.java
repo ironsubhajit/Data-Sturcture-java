@@ -30,6 +30,19 @@ public class SinglyLinkedList {
         return;
     }
 
+    Node insertNodeAtTail(Node head, int data) {
+        Node temp = head;
+        if (head == null){
+            head = new Node(data);
+            return head;
+        }
+        while(temp.next != null){
+            temp = temp.next;
+        }
+        temp.next = new Node(data);
+        return head;  
+    }
+
     void printSinglyLinkedList(Node temp){
         if(temp == null){
             return;
