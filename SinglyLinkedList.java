@@ -46,6 +46,34 @@ public class SinglyLinkedList {
         return head;  
     }
     
+    // get kthToLast Element
+    Node kthToLast(Node head, int k){
+        Node slow = head;
+        Node fast = head;
+        
+        // move fast node to kth position from head position
+        for(int i=0; i<k; i++){
+            if(fast==null) return null;
+            fast = fast.next;
+        }
+
+        // move both node with same pace till fast node hits end
+        while(fast!=null){
+            fast = fast.next;
+            slow = slow.next;
+        }
+        return slow;
+    }
+
+    // print Node
+    void printNode(Node node){
+        if(node == null){
+            System.err.println("Node is null");
+            return;
+        }
+        System.out.println("Node Value is: "+node.data);
+    }
+
     // print linkedlist argument head node
     void printSinglyLinkedList(Node temp){
         if(temp == null){
