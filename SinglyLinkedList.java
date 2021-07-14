@@ -89,6 +89,28 @@ public class SinglyLinkedList {
         }
         return temp;
     }
+    
+    // reverse a linkedlist
+    Node reverse(Node list_head){
+        Node curr = head, prevNode = null, nextNode = null;
+        
+        // if list is empty
+        if(curr == null){
+            return head;
+        }
+
+        while(curr != null){
+            nextNode = curr.next;
+            curr.next = prevNode;
+            prevNode = curr;
+            curr = nextNode;
+        }
+
+        // modify head to lastnode
+        head = prevNode;
+        return head;
+    }
+
     // print Node
     void printNode(Node node){
         if(node == null){
