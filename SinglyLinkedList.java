@@ -65,6 +65,30 @@ public class SinglyLinkedList {
         return slow;
     }
 
+    // Delete Middle node (nither first nor last node) giving only that node
+    // should not return anything
+    void deleteMidNode(Node n){
+        Node temp = n.next;
+        if(n == null || n.next == null) {
+            return;
+        }
+        // copy next to deleted node details to that node and delete next node;
+        n.data = temp.data;
+        n.next = temp.next;
+        return;
+    }
+
+    // Search node
+    Node search_Node(int data, Node list_head){
+        Node temp = list_head;
+        while(temp != null){
+            if(temp.data == data){
+                return temp;
+            }
+            temp = temp.next;
+        }
+        return temp;
+    }
     // print Node
     void printNode(Node node){
         if(node == null){
