@@ -3,4 +3,7 @@
 
 # Content:  
 1. LinkedList  
-    . SinglyLinkedList  
+    * SinglyLinkedList
+2. Graph 
+    * BFS
+    * DFS
